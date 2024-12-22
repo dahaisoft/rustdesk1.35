@@ -432,7 +432,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
           "Status",
           "${translate("new-version-of-{${bind.mainGetAppNameSync()}}-tip")} (${bind.mainGetNewVersion()}).",
           "Click to download", () async {
-        final Uri url = Uri.parse('https://rustdesk.com/download');
+        final Uri url = Uri.parse('http://yk.aqdu.cn/download');
         await launchUrl(url);
       }, closeButton: true);
     }
@@ -510,7 +510,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
             marginTop: LinuxCards.isEmpty ? 20.0 : 5.0,
             help: 'Help',
             link:
-                'https://rustdesk.com/docs/en/client/linux/#permissions-issue',
+                'https://http://yk.aqdu.cn/help',
             closeButton: true,
             closeOption: keyShowSelinuxHelpTip,
           ));
@@ -521,13 +521,13 @@ class _DesktopHomePageState extends State<DesktopHomePage>
             "Warning", "wayland_experiment_tip", "", () async {},
             marginTop: LinuxCards.isEmpty ? 20.0 : 5.0,
             help: 'Help',
-            link: 'https://rustdesk.com/docs/en/client/linux/#x11-required'));
+            link: 'https://http://yk.aqdu.cn/help'));
       } else if (bind.mainIsLoginWayland()) {
         LinuxCards.add(buildInstallCard("Warning",
             "Login screen using Wayland is not supported", "", () async {},
             marginTop: LinuxCards.isEmpty ? 20.0 : 5.0,
             help: 'Help',
-            link: 'https://rustdesk.com/docs/en/client/linux/#login-screen'));
+            link: 'https://http://yk.aqdu.cn/help'));
       }
       if (LinuxCards.isNotEmpty) {
         return Column(
@@ -541,7 +541,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
         child: OutlinedButton(
           onPressed: () {
             SystemNavigator.pop(); // Close the application
-            // https://github.com/flutter/flutter/issues/66631
+            // https://http://yk.aqdu.cn/help
             if (isWindows) {
               exit(0);
             }
